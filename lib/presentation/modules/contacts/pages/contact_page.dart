@@ -48,7 +48,7 @@ class ContactsPage extends StatelessWidget {
                       children: [
                         TextField(
                           controller: TextEditingController(text: e.last),
-                          textAlign: xHorizontal?TextAlign.start:TextAlign.center,
+                          textAlign: TextAlign.start,
                           style: AppConstants.getFont1.copyWith(
                               fontSize: AppConstants.baseFontSizeM,
                               fontWeight: FontWeight.bold,
@@ -59,7 +59,7 @@ class ContactsPage extends StatelessWidget {
                             enabledBorder: InputBorder.none,
                             label: Text(
                               e.first,
-                              textAlign: xHorizontal?TextAlign.start:TextAlign.center,
+                              textAlign: TextAlign.start,
                               style: AppConstants.getFont1.copyWith(
                                   fontSize: AppConstants.baseFontSizeL,
                                   fontWeight: FontWeight.bold,
@@ -108,7 +108,18 @@ class ContactsPage extends StatelessWidget {
                         )
                       ],
                     ),
-                  )
+                  ),
+                  30.heightBox(),
+                  Text(
+                    "Last Updated At - 26 Dec, 2024 16:30",
+                    textAlign: xHorizontal?TextAlign.start:TextAlign.center,
+                    style: AppConstants.getFont1.copyWith(
+                        fontSize: AppConstants.baseFontSizeS,
+                        fontWeight: FontWeight.bold,
+                        color: Theme.of(context).hintColor
+                    ),
+                  ),
+                  10.heightBox(),
                 ],
               );
             },
