@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:kph_website/core/common/app_functions.dart';
 import 'package:kph_website/presentation/modules/home/bloc/home_page_bloc.dart';
 import 'package:kph_website/presentation/modules/theme/bloc/theme_cubit.dart';
 import 'package:scroll_to_index/scroll_to_index.dart';
@@ -17,18 +16,20 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    final appGlobalKey = GlobalKey();
     return MultiBlocProvider(
       providers: [
-        BlocProvider(create: (context) => ThemeCubit(),),
-        BlocProvider(create: (context) => HomePageBloc(
-          buildContext: context,
-          scrollController: AutoScrollController(
-            axis: Axis.vertical,
-          )
-        ),),
+        BlocProvider(
+          create: (context) => ThemeCubit(),
+        ),
+        BlocProvider(
+          create: (context) => HomePageBloc(
+              buildContext: context,
+              scrollController: AutoScrollController(
+                axis: Axis.vertical,
+              )),
+        ),
       ],
-      child: BlocBuilder<ThemeCubit,ThemeState>(
+      child: BlocBuilder<ThemeCubit, ThemeState>(
         builder: (context, state) {
           return MaterialApp(
             key: GlobalKey(),
@@ -54,17 +55,19 @@ class GatewayPage extends StatefulWidget {
 }
 
 class _GatewayPageState extends State<GatewayPage> {
-
   @override
   void initState() {
     initLoad();
     super.initState();
   }
 
-  initLoad() async{
+  initLoad() async {
     await Future.delayed(const Duration(milliseconds: 100));
-    if(context.mounted){
-      Navigator.of(context).pushNamedAndRemoveUntil(RouteUtils.homePage, (route) => false,);
+    if (mounted) {
+      Navigator.of(context).pushNamedAndRemoveUntil(
+        RouteUtils.homePage,
+        (route) => false,
+      );
     }
   }
 
@@ -73,4 +76,3 @@ class _GatewayPageState extends State<GatewayPage> {
     return const Placeholder();
   }
 }
-
