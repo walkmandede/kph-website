@@ -1,16 +1,45 @@
-
 import 'package:kph_website/core/common/app_assets.dart';
 import 'package:kph_website/core/common/app_svgs.dart';
 import 'package:kph_website/data/models/my_project_model.dart';
 import 'package:kph_website/data/models/my_skill_model.dart';
 import 'package:kph_website/data/models/my_tech.dart';
 
-class MyProjectRepo{
-
+class MyProjectRepo {
   static List<MyProjectModel> myProjectsData = [
     MyProjectModel(
+      name: "Phluid Worldwide (Helpy and Hire Helpy)",
+      overview:
+          """Phluid Helpy matches domestic helpers to employers, providing a seamless process to get transparent, safe, and competitive job placements. We utilise our proprietary AI matching algorithm to match you with your ideal employer.
+Phluid Helpy is also a vibrant community for you to engage with others, ask questions and share your thoughts!""",
+      highlight: [
+        "Develop and maintain features",
+      ],
+      metas: [
+        MyProjectMeta(
+            name: "Phluid Helpy Play Store Link",
+            data:
+                "https://play.google.com/store/apps/details?id=com.phluid.dh.mobile&hl=en"),
+        MyProjectMeta(
+            name: "Phluid Hire Helpy Play Store Link",
+            data:
+                "https://play.google.com/store/apps/details?id=com.phluid.dh.employer"),
+        MyProjectMeta(
+            name: "Phluid Helpy App Store Link",
+            data: "https://apps.apple.com/sg/app/phluid-helpy/id6461165550"),
+        MyProjectMeta(
+            name: "Phluid Hire Helpy App Store Link",
+            data:
+                "https://apps.apple.com/us/app/phluid-hire-helpy/id6459793048"),
+      ],
+      onlineImages: [
+        "https://play-lh.googleusercontent.com/yvwsQ3NoE1HmHUdVKYjSLA5sK7FU62tYhovhAkxwd6VD-mxaGapzK2ravEkh2piqSt5A=w5120-h2880-rw",
+        "https://play-lh.googleusercontent.com/vv97fmuWJFssEYVD9QdQkAznLGRk7OfANfF69YOlL9Ggz1i1zdYfys-aQzime4jhGfK5=w1052-h592-rw",
+      ],
+    ),
+    MyProjectModel(
       name: "Fary Taxi Application",
-      overview: "Developed a cutting-edge online taxi booking application, providing seamless transportation services for users.",
+      overview:
+          "Developed a cutting-edge online taxi booking application, providing seamless transportation services for users.",
       highlight: [
         "Led a team of mobile developers, overseeing task delegation and project execution.",
         "Designed and deployed the application to app stores, achieving over 100,000 active users.",
@@ -19,20 +48,19 @@ class MyProjectRepo{
       metas: [
         MyProjectMeta(
             name: "User Play Store Link",
-            data: "https://play.google.com/store/apps/details?id=com.xsphere.fary_taxi_enduser"
-        ),
+            data:
+                "https://play.google.com/store/apps/details?id=com.xsphere.fary_taxi_enduser"),
         MyProjectMeta(
             name: "User App Store Link",
-            data: "https://apps.apple.com/mm/app/fary-ready-to-deliver/id1669442797"
-        ),
+            data:
+                "https://apps.apple.com/mm/app/fary-ready-to-deliver/id1669442797"),
         MyProjectMeta(
             name: "Driver Play Store Link",
-            data: "https://play.google.com/store/apps/details?id=com.xsphere.fary_taxi_driver"
-        ),
+            data:
+                "https://play.google.com/store/apps/details?id=com.xsphere.fary_taxi_driver"),
         MyProjectMeta(
             name: "Driver App Store Link",
-            data: "https://apps.apple.com/mm/app/fary-driver/id1671354074"
-        ),
+            data: "https://apps.apple.com/mm/app/fary-driver/id1671354074"),
       ],
       onlineImages: [
         "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/30/23/d3/3023d3aa-3ad3-7e15-3f1b-079892b03acc/2c701970-e822-4cd3-8eeb-3d9b343b85fc_Group_476.png/460x0w.webp",
@@ -43,7 +71,8 @@ class MyProjectRepo{
     ),
     MyProjectModel(
       name: "L2E Myanmar Mobile Learning Platform",
-      overview: "Created an innovative mobile learning platform connecting students with top educators in Myanmar.",
+      overview:
+          "Created an innovative mobile learning platform connecting students with top educators in Myanmar.",
       highlight: [
         "Delivered a secure, user-friendly application with features tailored for seamless video learning.",
         "Overcame technical challenges to ensure secure video playback and prevent unauthorized downloads.",
@@ -52,12 +81,11 @@ class MyProjectRepo{
       metas: [
         MyProjectMeta(
             name: "User Play Store Link",
-            data: "https://play.google.com/store/apps/details?id=com.xsphere.e_learning"
-        ),
+            data:
+                "https://play.google.com/store/apps/details?id=com.xsphere.e_learning"),
         MyProjectMeta(
             name: "User App Store Link",
-            data: "https://apps.apple.com/mm/app/l2e-myanmar/id1626038880"
-        ),
+            data: "https://apps.apple.com/mm/app/l2e-myanmar/id1626038880"),
       ],
       onlineImages: [
         "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource112/v4/ff/5c/f5/ff5cf5ff-9c44-8eb7-1668-b1f6a3266ec3/bd92e97d-0964-467c-9e44-ec991b9c87e6_Simulator_Screen_Shot_-_iPhone_11_Pro_Max_-_2022-11-10_at_14.07.03.png/460x0w.webp",
@@ -68,7 +96,8 @@ class MyProjectRepo{
     ),
     MyProjectModel(
       name: "QQ Studio Applications",
-      overview: "Developed a suite of applications to streamline retail operations for a fashion shop in Yangon.",
+      overview:
+          "Developed a suite of applications to streamline retail operations for a fashion shop in Yangon.",
       highlight: [
         "Built a mobile shopping app for customers, enhancing the remote purchasing experience.",
         "Developed PC-based cashier and admin apps to manage inventory, sales, and operations.",
@@ -80,7 +109,7 @@ class MyProjectRepo{
     MyProjectModel(
       name: "Xsphere Internal Application",
       overview:
-      "Digitalized HR processes and enhanced employee activity tracking through a dedicated app.",
+          "Digitalized HR processes and enhanced employee activity tracking through a dedicated app.",
       highlight: [
         "Developed a mobile app with features like check-in/check-out, leave requests, and file reporting.",
         "Created a QR generator app to simplify employee attendance.",
@@ -92,7 +121,7 @@ class MyProjectRepo{
     MyProjectModel(
       name: "The Beast Gym App",
       overview:
-      "Built a mobile application to enhance gym users' experiences and streamline their interactions with gym facilities.",
+          "Built a mobile application to enhance gym users' experiences and streamline their interactions with gym facilities.",
       highlight: [
         "Enabled trainer bookings and package purchases directly through the app.",
         "Implemented check-in/check-out features to track user attendance.",
@@ -101,7 +130,8 @@ class MyProjectRepo{
       metas: [
         MyProjectMeta(
             name: "User Play Store Link",
-            data: "https://play.google.com/store/apps/details?id=com.xsphere.the_beast_gym_end_user"),
+            data:
+                "https://play.google.com/store/apps/details?id=com.xsphere.the_beast_gym_end_user"),
         MyProjectMeta(
             name: "User App Store Link",
             data: "https://apps.apple.com/mm/app/the-beast/id6470431862"),
@@ -115,7 +145,7 @@ class MyProjectRepo{
     MyProjectModel(
       name: "Sanpya Express - eCommerce Platform",
       overview:
-      "Created a comprehensive eCommerce system with integrated apps for online and in-store shopping.",
+          "Created a comprehensive eCommerce system with integrated apps for online and in-store shopping.",
       highlight: [
         "Developed distinct apps for users, sales staff, and cashiers, ensuring smooth transactions and inventory management.",
         "Designed an admin panel for streamlined system oversight.",
@@ -125,7 +155,7 @@ class MyProjectRepo{
         MyProjectMeta(
             name: "User Play Store Link",
             data:
-            "https://play.google.com/store/apps/details?id=com.xsphere.sanpya_express_user"),
+                "https://play.google.com/store/apps/details?id=com.xsphere.sanpya_express_user"),
         MyProjectMeta(
             name: "User App Store Link",
             data: "https://apps.apple.com/mm/app/san-pya/id6479732045"),
@@ -138,7 +168,7 @@ class MyProjectRepo{
     MyProjectModel(
       name: "Car Crash List",
       overview:
-      "Created a mobile application to track and list car crashes, providing users with up-to-date and organized incident data.",
+          "Created a mobile application to track and list car crashes, providing users with up-to-date and organized incident data.",
       highlight: [
         "Developed an intuitive interface for users to browse and update crash records.",
         "Ensured fast and reliable data access through optimized backend processes.",
@@ -148,7 +178,7 @@ class MyProjectRepo{
         MyProjectMeta(
             name: "User Play Store Link",
             data:
-            "https://play.google.com/store/apps/details?id=com.kphkph.car_crash_list"),
+                "https://play.google.com/store/apps/details?id=com.kphkph.car_crash_list"),
       ],
       onlineImages: [
         // "https://play-lh.googleusercontent.com/3qYFUKdG-6jYPuS9g6KmsO1tsZdPVhUkro6C2pFYRk_WsUC6DJQDnJBzSPFCYCUDVA=w1052-h592-rw",

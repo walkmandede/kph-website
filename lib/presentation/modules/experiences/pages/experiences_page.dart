@@ -68,7 +68,7 @@ class ExperiencesPage extends StatelessWidget {
                               : CrossAxisAlignment.center,
                           children: [
                             Text(
-                              "Senior Mobile Developer",
+                              "Flutter Developer",
                               textAlign: xHorizontal
                                   ? TextAlign.start
                                   : TextAlign.center,
@@ -78,7 +78,7 @@ class ExperiencesPage extends StatelessWidget {
                                   color: Theme.of(context).hintColor),
                             ),
                             Text(
-                              "Xsphere - Yangon, Myanmar",
+                              "Phluid WorldWide — Singapore",
                               textAlign: xHorizontal
                                   ? TextAlign.start
                                   : TextAlign.center,
@@ -89,7 +89,7 @@ class ExperiencesPage extends StatelessWidget {
                                       Theme.of(context).colorScheme.secondary),
                             ),
                             Text(
-                              "Jan 2022 - Sep 2024",
+                              "Dec 2024 - Present",
                               textAlign: xHorizontal
                                   ? TextAlign.start
                                   : TextAlign.center,
@@ -105,16 +105,11 @@ class ExperiencesPage extends StatelessWidget {
                                 .ofScreenHeight(context: context)
                                 .heightBox(),
                             Text(
-                              """• Led a mobile development team of six, delegating and organizing tasks based on project manager directives to ensure smooth workflow and timely project completion.
-                        
-• Developed mobile applications using Flutter and Dart, including Fary Taxi, which reached over 100,000 active users, and L2E Myanmar, a mobile learning application.
-                        
-• Reviewed code contributions from team members, maintaining high standards and consistency across the codebase and guiding junior developers to improve code quality.
-                        
-• Assisted with backend tasks in Node.js and Express for various projects, optimizing data interactions and enhancing app performance.
-                        
-• Utilized Flutter, Dart, JavaScript, Node.js, Express, Prisma, MongoDB, and PostgreSQL to build and maintain scalable, efficient systems.
-                        """,
+                              """• Contributed to the development of two mobile applications: Phluid Helpy and Phluid Hire Helpy.
+
+• Collaborated closely with the international team to build and maintain cross-platform features using Flutter.
+
+• Focused on delivering user-friendly interfaces and ensuring performance optimization.""",
                               textAlign: xHorizontal
                                   ? TextAlign.start
                                   : TextAlign.center,

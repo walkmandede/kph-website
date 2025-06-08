@@ -19,7 +19,7 @@ dependencies:
   flutter_svg:
   url_launcher:
   qr_flutter:
-  animated_text_kit: ^4.2.2
+  # animated_text_kit: ^4.2.2
 
 dev_dependencies:
   flutter_test:

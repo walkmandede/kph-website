@@ -1,4 +1,3 @@
-import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -6,8 +5,6 @@ import 'package:kph_website/core/common/app_assets.dart';
 import 'package:kph_website/core/common/app_constants.dart';
 import 'package:kph_website/core/common/app_enums.dart';
 import 'package:kph_website/core/common/app_extensions.dart';
-import 'package:kph_website/core/common/app_functions.dart';
-import 'package:kph_website/core/common/app_svgs.dart';
 import 'package:kph_website/presentation/_common_widgets/my_responsive_builder.dart';
 import 'package:kph_website/presentation/modules/home/bloc/home_page_bloc.dart';
 import 'package:url_launcher/url_launcher.dart';
@@ -29,7 +26,8 @@ and like playing mobile games in my free time.""";
 
     return SizedBox(
       width: double.infinity,
-      height: (MediaQuery.sizeOf(context).height*(1-homeBloc.state.homeHeaderBaseHeightFactor)),
+      height: (MediaQuery.sizeOf(context).height *
+          (1 - homeBloc.state.homeHeaderBaseHeightFactor)),
       child: MyResponsiveBuilder(
         horizontalBuilder: (xHorizontal) {
           return LayoutBuilder(
@@ -37,8 +35,10 @@ and like playing mobile games in my free time.""";
               return SizedBox.expand(
                 child: Padding(
                   padding: EdgeInsets.symmetric(
-                    horizontal: AppConstants.basePaddingFactor.ofScreenWidth(context: context),
-                    vertical: AppConstants.basePaddingFactor.ofScreenHeight(context: context),
+                    horizontal: AppConstants.basePaddingFactor
+                        .ofScreenWidth(context: context),
+                    vertical: AppConstants.basePaddingFactor
+                        .ofScreenHeight(context: context),
                   ),
                   child: Row(
                     crossAxisAlignment: CrossAxisAlignment.end,
@@ -52,46 +52,44 @@ and like playing mobile games in my free time.""";
                           children: [
                             RichText(
                               text: TextSpan(
-                                text: "Kyaw",
-                                style: AppConstants.getFont1.copyWith(
-                                    fontWeight: FontWeight.bold,
-                                    fontSize: AppConstants.baseFontSizeXXXL,
-                                    color: Theme.of(context).primaryColor
-                                ),
-                                children: [
-                                  TextSpan(
-                                      text: " Phyoe Han",
-                                      style: AppConstants.getFont1.copyWith(
-                                          fontWeight: FontWeight.bold,
-                                          fontSize: AppConstants.baseFontSizeXXXL,
-                                          color: Theme.of(context).textTheme.bodyMedium!.color
-                                      )
-                                  ),
-                                  TextSpan(
-                                      text: "\nFlutter Developer And Software Engineer",
-                                      style: AppConstants.getFont1.copyWith(
-                                          fontWeight: FontWeight.bold,
-                                          fontSize: AppConstants.baseFontSizeXXL,
-                                          color: Theme.of(context).textTheme.bodyMedium!.color
-                                      )
-                                  ),
-                                ]
-                              ),
+                                  text: "Kyaw",
+                                  style: AppConstants.getFont1.copyWith(
+                                      fontWeight: FontWeight.bold,
+                                      fontSize: AppConstants.baseFontSizeXXXL,
+                                      color: Theme.of(context).primaryColor),
+                                  children: [
+                                    TextSpan(
+                                        text: " Phyoe Han",
+                                        style: AppConstants.getFont1.copyWith(
+                                            fontWeight: FontWeight.bold,
+                                            fontSize:
+                                                AppConstants.baseFontSizeXXXL,
+                                            color: Theme.of(context)
+                                                .textTheme
+                                                .bodyMedium!
+                                                .color)),
+                                    TextSpan(
+                                        text:
+                                            "\nFlutter Developer And Software Engineer",
+                                        style: AppConstants.getFont1.copyWith(
+                                            fontWeight: FontWeight.bold,
+                                            fontSize:
+                                                AppConstants.baseFontSizeXXL,
+                                            color: Theme.of(context)
+                                                .textTheme
+                                                .bodyMedium!
+                                                .color)),
+                                  ]),
                             ),
                             (c1.maxHeight * 0.05).heightBox(),
                             Flexible(
                               child: FittedBox(
-                                child: AnimatedTextKit(
-                                  animatedTexts: [
-                                    TypewriterAnimatedText(
-                                      aboutMeText,
-                                      textStyle: AppConstants.getFont1.copyWith(
-                                          fontWeight: FontWeight.bold,
-                                          fontSize: AppConstants.baseFontSizeXL,
-                                          color: Theme.of(context).hintColor
-                                      )
-                                    )
-                                  ],
+                                child: Text(
+                                  aboutMeText,
+                                  style: AppConstants.getFont1.copyWith(
+                                      fontWeight: FontWeight.bold,
+                                      fontSize: AppConstants.baseFontSizeXL,
+                                      color: Theme.of(context).hintColor),
                                 ),
                                 // child: Text(
                                 //     aboutMeText,
@@ -107,13 +105,14 @@ and like playing mobile games in my free time.""";
                             Text(
                               "Find me on",
                               style: AppConstants.getFont1.copyWith(
-                                fontSize: AppConstants.baseFontSizeL,
-                                color: Theme.of(context).disabledColor
-                              ),
+                                  fontSize: AppConstants.baseFontSizeL,
+                                  color: Theme.of(context).disabledColor),
                             ),
                             (c1.maxHeight * 0.015).heightBox(),
                             SizedBox(
-                              width: xHorizontal?c1.maxWidth * 0.15:c1.maxWidth * 0.35,
+                              width: xHorizontal
+                                  ? c1.maxWidth * 0.15
+                                  : c1.maxWidth * 0.35,
                               child: Row(
                                 spacing: c1.maxWidth * 0.015,
                                 children: [
@@ -123,10 +122,9 @@ and like playing mobile games in my free time.""";
                                         child: FittedBox(
                                           child: InkWell(
                                             onTap: () {
-                                              try{
+                                              try {
                                                 launchUrl(Uri.parse(each.link));
-                                              }
-                                              catch(_){}
+                                              } catch (_) {}
                                             },
                                             child: SvgPicture.string(
                                               each.svgString,
@@ -142,7 +140,9 @@ and like playing mobile games in my free time.""";
                           ],
                         ),
                       ),
-                      AppConstants.basePaddingFactorS.ofScreenWidth(context: context).widthBox(),
+                      AppConstants.basePaddingFactorS
+                          .ofScreenWidth(context: context)
+                          .widthBox(),
                       Expanded(
                         flex: 3,
                         child: LayoutBuilder(
@@ -173,8 +173,10 @@ and like playing mobile games in my free time.""";
               return SizedBox.expand(
                 child: Padding(
                   padding: EdgeInsets.symmetric(
-                    horizontal: AppConstants.basePaddingFactor.ofScreenWidth(context: context),
-                    vertical: AppConstants.basePaddingFactor.ofScreenHeight(context: context),
+                    horizontal: AppConstants.basePaddingFactor
+                        .ofScreenWidth(context: context),
+                    vertical: AppConstants.basePaddingFactor
+                        .ofScreenHeight(context: context),
                   ),
                   child: Column(
                     children: [
@@ -183,32 +185,33 @@ and like playing mobile games in my free time.""";
                         child: FittedBox(
                           child: Padding(
                             padding: EdgeInsets.symmetric(
-                              horizontal: c1.maxWidth * 0.05
-                            ),
+                                horizontal: c1.maxWidth * 0.05),
                             child: RichText(
                               text: TextSpan(
-                                text: "Hello, ",
-                                style: AppConstants.getFont1.copyWith(
-                                  color: Theme.of(context).textTheme.bodyMedium!.color,
-                                  fontWeight: FontWeight.bold
-                                ),
-                                children: [
-                                  TextSpan(
-                                    text: "I'm ",
-                                    style: AppConstants.getFont1.copyWith(
-                                      color: Theme.of(context).colorScheme.primary,
-                                      fontWeight: FontWeight.bold
-                                    )
-                                  ),
-                                  TextSpan(
-                                    text: "Kyaw Phyoe Han",
-                                    style: AppConstants.getFont1.copyWith(
-                                        color: Theme.of(context).textTheme.bodyMedium!.color,
-                                        fontWeight: FontWeight.bold
-                                    )
-                                  ),
-                                ]
-                              ),
+                                  text: "Hello, ",
+                                  style: AppConstants.getFont1.copyWith(
+                                      color: Theme.of(context)
+                                          .textTheme
+                                          .bodyMedium!
+                                          .color,
+                                      fontWeight: FontWeight.bold),
+                                  children: [
+                                    TextSpan(
+                                        text: "I'm ",
+                                        style: AppConstants.getFont1.copyWith(
+                                            color: Theme.of(context)
+                                                .colorScheme
+                                                .primary,
+                                            fontWeight: FontWeight.bold)),
+                                    TextSpan(
+                                        text: "Kyaw Phyoe Han",
+                                        style: AppConstants.getFont1.copyWith(
+                                            color: Theme.of(context)
+                                                .textTheme
+                                                .bodyMedium!
+                                                .color,
+                                            fontWeight: FontWeight.bold)),
+                                  ]),
                             ),
                           ),
                         ),
@@ -218,9 +221,8 @@ and like playing mobile games in my free time.""";
                         child: FittedBox(
                           child: Text(
                             "Flutter Developer And Software Engineer",
-                            style: AppConstants.getFont1.copyWith(
-                                color: Theme.of(context).hintColor
-                            ),
+                            style: AppConstants.getFont1
+                                .copyWith(color: Theme.of(context).hintColor),
                           ),
                         ),
                       ),
@@ -235,26 +237,20 @@ and like playing mobile games in my free time.""";
                           },
                         ),
                       ),
-                      (c1.maxHeight*0.025).heightBox(),
+                      (c1.maxHeight * 0.025).heightBox(),
                       Expanded(
                         flex: 5,
                         child: FittedBox(
-                          alignment: Alignment.center,
-                          child: AnimatedTextKit(
-                            animatedTexts: [
-                              TypewriterAnimatedText(
-                                aboutMeText,
-                                textStyle: AppConstants.getFont1.copyWith(
-                                    fontWeight: FontWeight.bold,
-                                    fontSize: AppConstants.baseFontSizeXXL,
-                                    color: Theme.of(context).hintColor
-                                ),
-                              )
-                            ],
-                          ),
-                        ),
+                            alignment: Alignment.center,
+                            child: Text(
+                              aboutMeText,
+                              style: AppConstants.getFont1.copyWith(
+                                  fontWeight: FontWeight.bold,
+                                  fontSize: AppConstants.baseFontSizeXXL,
+                                  color: Theme.of(context).hintColor),
+                            )),
                       ),
-                      (c1.maxHeight*0.025).heightBox(),
+                      (c1.maxHeight * 0.025).heightBox(),
                       Expanded(
                         flex: 2,
                         child: SizedBox(
@@ -264,25 +260,24 @@ and like playing mobile games in my free time.""";
                               Text(
                                 "Find me on",
                                 style: AppConstants.getFont1.copyWith(
-                                  fontWeight: FontWeight.w600,
-                                  color: Theme.of(context).disabledColor,
-                                  fontSize: AppConstants.baseFontSizeS
-                                ),
+                                    fontWeight: FontWeight.w600,
+                                    color: Theme.of(context).disabledColor,
+                                    fontSize: AppConstants.baseFontSizeS),
                               ),
                               Expanded(
                                 child: Row(
                                   spacing: c1.maxWidth * 0.015,
                                   children: [
                                     ...EnumSocialApps.values.map(
-                                          (each) {
+                                      (each) {
                                         return Expanded(
                                           child: FittedBox(
                                             child: InkWell(
                                               onTap: () {
-                                                try{
-                                                  launchUrl(Uri.parse(each.link));
-                                                }
-                                                catch(_){}
+                                                try {
+                                                  launchUrl(
+                                                      Uri.parse(each.link));
+                                                } catch (_) {}
                                               },
                                               child: SvgPicture.string(
                                                 each.svgString,
